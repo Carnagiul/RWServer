@@ -1,0 +1,7 @@
+name: MyPlugin
+main: Class.main
+version: 1.0.0
+author: Canargiul
+description: "aaaaaa"
+license: MIT
+website: http://www.myhomepage.com
