@@ -66,7 +66,7 @@ public class Global implements Listener{
     }
     
     @EventMethod
-    public void onCommand1(PlayerCommandEvent ev)
+    public void onCommand2(PlayerCommandEvent ev)
     {
     	this.p.RWcmd(ev.getPlayer(), ev.getCommand());
     }

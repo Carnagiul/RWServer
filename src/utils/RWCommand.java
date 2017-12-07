@@ -1,5 +1,6 @@
 package utils;
 
+import Class.RWLocation;
 import Class.main;
 
 public class RWCommand {
@@ -37,6 +38,20 @@ public class RWCommand {
 				this.getM().utils.teleportTo(this.data[1], this.data[2], owner);
 			else
 				this.getM().utils.getPlayer(owner).sendTextMessage(this.data[0] + " <<Player1>> --> <<Player2>>");
+		}
+		else if (this.data[0].equalsIgnoreCase("/warp"))
+		{
+			if (this.data.length == 2 && this.data[1].equalsIgnoreCase("list"))
+			{
+				this.getM().utils.getPlayer(owner).sendTextMessage("Listes des Warps disponibles : ");
+				for (RWLocation loc : this.getM().PublicLocation)
+				{
+					if (loc.getPos() != null && loc.getName() != null)
+						this.getM().utils.getPlayer(owner).sendTextMessage("/warp tp " + loc.getName());
+				}
+			}
+			else
+				this.getM().utils.getPlayer(owner).sendTextMessage(this.data[0] + " (list)");
 		}
 		else
 			this.getM().utils.getPlayer(owner).sendTextMessage("Unknow Command");
