@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import Class.main;
 import net.risingworld.api.objects.Player;
+import net.risingworld.api.utils.Vector3f;
 
 public class RWUtils {
 	private main m;
@@ -103,5 +104,19 @@ public class RWUtils {
 		}
 		else
 			return (-1);
+	}
+	
+	public Vector3f transformStringToVector3f(String vector)
+	{
+		String		vectorstr;
+		Vector3f	v;
+		String[]	vectorsplit;
+
+		vectorstr = vector;
+		vectorstr = vectorstr.replace("(", "0");
+		vectorstr = vectorstr.replace(")", "0");
+		vectorsplit = vectorstr.split(", ");
+		v = new Vector3f(Float.parseFloat(vectorsplit[0]), Float.parseFloat(vectorsplit[1]), Float.parseFloat(vectorsplit[2]));
+		return (v);
 	}
 }

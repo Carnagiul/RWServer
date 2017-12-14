@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import api.ChestProtection;
+import api.RWLocation;
 import net.risingworld.api.Plugin;
 import net.risingworld.api.objects.Player;
+import utils.RWColor;
 import utils.RWCommand;
 import utils.RWUtils;
 
@@ -16,12 +19,14 @@ public class main extends Plugin {
 	public Global global;
 	public List<RWLocation> PrivateLocation = new ArrayList<RWLocation>();
 	public List<RWLocation> PublicLocation = new ArrayList<RWLocation>();
+	public RWColor color;
 	
     @Override
     public void onEnable(){
     	utils = new RWUtils(this);
     	cmds = new RWCommand(this);
 		global = new Global(this);
+		color = new RWColor();
 		this.registerEventListener(global);
     }
 

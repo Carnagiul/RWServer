@@ -1,7 +1,7 @@
 package utils;
 
-import Class.RWLocation;
 import Class.main;
+import api.RWLocation;
 
 public class RWCommand {
 	private main m;
@@ -30,7 +30,7 @@ public class RWCommand {
 			if (this.data.length >= 3)
 				this.getM().utils.whisper_player(this.data[1], owner, this.data);
 			else
-				this.getM().utils.getPlayer(owner).sendTextMessage(this.data[0] + " <USERNAME> <<You're message here>>");
+				this.getM().utils.getPlayer(owner).sendTextMessage(this.data[0] + this.getM().color.Red + " <USERNAME> " + this.getM().color.White + " <<You're message here>>");
 		}
 		else if (this.data[0].equalsIgnoreCase("/tp") && this.getM().utils.getPlayer(owner).isAdmin())
 		{

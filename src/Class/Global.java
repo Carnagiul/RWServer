@@ -1,5 +1,6 @@
 package Class;
 
+import api.ChestProtection;
 import net.risingworld.api.events.EventMethod;
 import net.risingworld.api.events.Listener;
 import net.risingworld.api.events.player.PlayerChatEvent;
